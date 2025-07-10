@@ -52,10 +52,12 @@ input {
   padding: 0 40px;
   height: 73px;
   background-color: #fff;
+  border-bottom: 1px solid #ECECEC;
   position: fixed;
   top: 0;
   left: 0;
   box-sizing: border-box;
+  z-index: 1;
 }
 .header .home {
   display: inline-flex;
@@ -119,7 +121,7 @@ input {
   gap: 8px;
   align-self: stretch;
 }
-.panel-option .top a {
+.panel-option .top .choose {
   color: #4C79F4;
   text-align: center;
   font-family: Pretendard;
@@ -165,6 +167,19 @@ input {
 .panel-option .nav .accordion {
   width: 100%;
 }
+.panel-option .nav .accordion .checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: #000 url(../img/ic_checkbox_ac.svg) center no-repeat;
+  border: 1px solid #000;
+}
+.panel-option .nav .accordion .collapsed .checkbox {
+  background: #fff;
+}
+.panel-option .nav .accordion .accordion-button::after {
+  display: none;
+}
 .panel-option .nav .list {
   width: 100%;
 }
@@ -183,12 +198,12 @@ input {
 .panel-option .nav .nav-link.complate .value {
   display: block;
 }
+.panel-option .nav .nav-link:hover {
+  background: linear-gradient(90deg, rgba(76, 121, 244, 0) 0%, rgba(76, 121, 244, 0.1) 100%);
+}
 .panel-option .nav .nav-link.active {
   background: linear-gradient(90deg, rgba(76, 121, 244, 0) 0%, rgba(76, 121, 244, 0.25) 100%);
   border-right: 2px solid #4C79F4;
-}
-.panel-option .nav .nav-link:hover {
-  background: linear-gradient(90deg, rgba(76, 121, 244, 0) 0%, rgba(76, 121, 244, 0.1) 100%);
 }
 .panel-option .nav .nav-link::before {
   content: "";
@@ -294,6 +309,25 @@ input {
   line-height: normal;
   letter-spacing: -0.28px;
   height: 40px;
+}
+
+.btn-black {
+  display: flex;
+  height: 40px;
+  padding: 10px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 4px;
+  background: #000;
+  color: #FFF;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.28px;
 }
 
 .panel-quote {
@@ -504,6 +538,9 @@ input {
   line-height: 140%; /* 19.6px */
   letter-spacing: -0.28px;
 }
+.panel-quote .viewSummary.ac {
+  color: #4C79F4;
+}
 .panel-quote .TOTAL {
   position: absolute;
   bottom: 0;
@@ -570,7 +607,8 @@ input {
   gap: 10px;
   align-self: stretch;
   border-radius: 6px;
-  background: #1e1e1e;
+  background: #000;
+  border: 0;
   box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
   color: #F6F6F6;
   font-family: Pretendard;
@@ -629,4 +667,273 @@ input {
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.36px;
+}
+
+.commandFooter {
+  position: fixed;
+  bottom: 0;
+  left: 300px;
+  right: 378px;
+  display: flex;
+  padding: 18px 20px;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(234, 236, 238, 0.9);
+  backdrop-filter: blur(4px);
+  gap: 7px;
+}
+.commandFooter .prev {
+  flex: 1 0 0;
+  display: flex;
+  max-width: 120px;
+  height: 40px;
+  padding: 0px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  border-radius: 999px;
+  border: 1px solid #000;
+}
+.commandFooter .next {
+  flex: 1 0 0;
+  border-radius: 999px;
+  border: 1px solid #000;
+  background: #000;
+  display: flex;
+  max-width: 120px;
+  height: 40px;
+  padding: 0px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: #F6F6F6;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+.commandFooter .centerPanel {
+  border-radius: 9999px;
+  background: #FFF;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 14px 24px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px 24px;
+}
+.commandFooter .centerPanel .spine {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+.commandFooter .centerPanel .value {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  margin-left: -16px;
+  min-width: 50px;
+}
+.commandFooter .centerPanel .guide {
+  color: #4C79F4;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
+.bindingStyle {
+  padding: 0px 20px;
+  max-width: 928px;
+  margin: 0 auto;
+  margin-top: 78px;
+  width: 100%;
+}
+.bindingStyle h2 {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  margin-bottom: 32px;
+}
+.bindingStyle ul {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+.bindingStyle ul li {
+  cursor: pointer;
+  display: flex;
+  width: 216px;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  color: #000;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+.bindingStyle ul li:hover {
+  font-weight: 500;
+}
+.bindingStyle ul li:hover .imgWrap {
+  opacity: 1;
+  border: 3px solid #4C79F4;
+}
+.bindingStyle ul li:hover .imgWrap img {
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+.bindingStyle ul li .imgWrap {
+  aspect-ratio: 1/1;
+  opacity: 0.8;
+  box-sizing: border-box;
+  border: 3px solid transparent;
+  overflow: hidden;
+}
+.bindingStyle ul li .imgWrap img {
+  transition: 0.2s ease-in-out;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(0.5);
+}
+
+#nav-tabContent .stepName {
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  margin-bottom: 40px;
+}
+#nav-tabContent .conWrap {
+  padding: 0 20px;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+#nav-tabContent .conWrap .side .accordion {
+  display: flex;
+  width: 309px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+#nav-tabContent .conWrap .side .accordion-item {
+  width: 100%;
+}
+#nav-tabContent .conWrap .side .accordion-button::after {
+  display: none;
+}
+#nav-tabContent .conWrap .side .accordion-button {
+  transition: none;
+  border-radius: 4px;
+  background: radial-gradient(54.1% 81.63% at 49.84% 100%, #7FC6FF 0%, #5A7EE9 100%);
+  box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.05);
+  color: #FFF;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  padding: 16px;
+}
+#nav-tabContent .conWrap .side .accordion-button.collapsed {
+  border-radius: 4px;
+  background: #FFF;
+  background: #fff;
+  box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.28px;
+}
+#nav-tabContent .conWrap .side .accordion-item {
+  background-color: transparent;
+  border: 0;
+}
+#nav-tabContent .conWrap .side .accordion-body {
+  display: flex;
+  padding: 8px 8px 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+}
+#nav-tabContent .conWrap .side .accordion-body .inputMsg {
+  margin: 0;
+}
+#nav-tabContent .conWrap .side .accordion-body .flex {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+}
+#nav-tabContent .conWrap .side label {
+  width: 100%;
+}
+#nav-tabContent .conWrap .optionDetail {
+  max-width: 560px;
+  margin: 0 auto;
+}
+#nav-tabContent .conWrap .optionDetail p {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.32px;
+}
+#nav-tabContent .conWrap .optionDetail .detailImg {
+  text-align: center;
+  margin-top: 40px;
+}
+#nav-tabContent .conWrap .optionDetail .detailImg img {
+  width: 100%;
+  max-width: 345px;
 }/*# sourceMappingURL=style.css.map */
