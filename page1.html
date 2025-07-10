@@ -133,87 +133,132 @@
             </div>
         </div>
         <div class="panel-quote">
-            <div class="group">
-                <div class="input-label">
-                    <strong>Quantity</strong>
-                    Starts at 300 Copies
+            <div class="contents">
+                <div class="group">
+                    <div class="input-label">
+                        <strong>Quantity</strong>
+                        Starts at 300 Copies
+                    </div>
+                    <div class="inputBx">
+                        <input class="input" type="text" placeholder="300">
+                        <button class="btn-line">Update</button>
+                    </div>
                 </div>
-                <div class="inputBx">
-                    <input class="input" type="text" placeholder="300">
-                    <button class="btn-line">Update</button>
+                <div class="shipping">
+                    <div class="est">Est. Shipping</div>
+                    <div class="date">Friday, June 20</div>
+                    <div class="divider"></div>
+                    <div class="price sum">
+                        <div class="key">Price</div>
+                        <div class="value">$28,590</div>
+                    </div>
+                    <div class="price">
+                        <div class="key">Price</div>
+                        <div class="value">$28,590</div>
+                    </div>
+                    <div class="price">
+                        <div class="key">Price per unit</div>
+                        <div class="value">$2.54</div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info">
+                        <div class="ic-check">
+                            <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.134766 4.63867L1.0918 3.68164L3.53906 6.07422L8.70703 0.933594L9.67773 1.89062L3.53906 8.01562L0.134766 4.63867Z" fill="#1BD396"/>
+                            </svg>                                
+                        </div>
+                        <div>High Quaity Printing with Heidelberg Offset Press</div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="shipping">
-                <div class="est">Est. Shipping</div>
-                <div class="date">Friday, June 20</div>
-                <div class="divider"></div>
-                <div class="price sum">
-                    <div class="key">Price</div>
-                    <div class="value">$28,590</div>
+                <div class="group">
+                    <div class="input-label">
+                        Shipping Address
+                    </div>
+                    <div class="inputBx">
+                        <input class="input" type="text" placeholder="Enter your zip code">
+                        <button class="btn-line">Apply</button>
+                    </div>
+                    <div class="inputMsg">Wrong zip code</div>
                 </div>
-                <div class="price">
-                    <div class="key">Price</div>
-                    <div class="value">$28,590</div>
+                <div class="group">
+                    <ul class="radioGroup">
+                        <li>
+                            <label class="radio">
+                                <input type="radio" name="shipType" checked>
+                                <i></i>
+                                <div class="key">
+                                    Expedited approx. 23 days <br/>
+                                    (Ocean & Ground)
+                                </div>
+                                <div class="value">$2,650</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="radio">
+                                <input type="radio" name="shipType">
+                                <i></i>
+                                <div class="key">
+                                    Air Express 2 3 days
+                                </div>
+                                <div class="value">$2,650</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="radio">
+                                <input type="radio" name="shipType">
+                                <i></i>
+                                <div class="key">
+                                    Split Shipping
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
                 </div>
-                <div class="price">
-                    <div class="key">Price per unit</div>
-                    <div class="value">$2.54</div>
-                </div>
-
-                <div class="divider"></div>
-
-                <div class="info">
-                    <div class="ic-check">✓</div>
-                    <div>High Quaity Printing with Heidelberg Offset Press</div>
-                </div>
-            </div>
-
-            <div class="group">
-                <div class="input-label">
-                    Shipping Address
-                </div>
-                <div class="inputBx">
-                    <input class="input" type="text" placeholder="Enter your zip code">
-                    <button class="btn-line">Apply</button>
-                </div>
-                <div class="inputMsg">Wrong zip code</div>
-            </div>
-
-            <div class="group">
-                <ul class="radioGroup">
-                    <li>
-                        <label class="radio">
-                            <input type="radio" name="shipType" checked>
-                            <i></i>
-                            <div class="key">
-                                Expedited approx. 23 days <br/>
-                                (Ocean & Ground)
+                <div class="group">
+                    <div class="split-shipping">
+                        <div class="split">
+                            <div class="item">
+                                <div class="input-label">
+                                    Expedited<br/>
+                                    approx. 23 days
+                                </div>
+                                <input type="text" class="input" placeholder="Enter quantity">
+                                <div class="price">$8,650</div>
                             </div>
-                            <div class="value">$2,650</div>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="radio">
-                            <input type="radio" name="shipType">
-                            <i></i>
-                            <div class="key">
-                                Air Express 2 3 days
+                            <div class="item">
+                                <div class="input-label">
+                                    Air Express<br/>
+                                    2 3 days
+                                </div>
+                                <input type="text" class="input" placeholder="Enter quantity">
+                                <div class="price">$8,650</div>
                             </div>
-                            <div class="value">$2,650</div>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="radio">
-                            <input type="radio" name="shipType">
-                            <i></i>
-                            <div class="key">
-                                Split Shipping
-                            </div>
-                        </label>
-                    </li>
-                </ul>
+                        </div>
+                        <div class="inputMsg">총 주문 수량과 일치하지 않습니다</div>
+                        <button class="btn-line">Update</button>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="paymentInfo">
+                        Once your order is placed, well send you an invoice<br/>
+                        via Payoneer, a secure B2B payment platform.<br/>
+                        <strong>Bank Transfer / Credit Card / ACH / PayPal</strong>
+                    </div>
+                </div>
+                <a href="#" class="viewSummary">View Summary</a>
             </div>
+
+            <div class="TOTAL">
+                <div class="flex">
+                    <div class="key">TOTAL</div>
+                    <div class="total-price">
+                        <em>$</em>
+                        <div class="value">31,240</div>
+                    </div>
+                </div>
+                <button class="CTA">ORDER NOW</button>
+            </div>
+
         </div>
     </section>
     
