@@ -34,7 +34,7 @@
                 <div class="groupName">1. Book Size</div>
                 <div class="list">
                     <!-- 입력이 완료된 단계에서는 .nav-link 에 .complate 클래쓰를 넣어주세요 -->
-                    <button class="nav-link active complate" id="nav-size-tab" data-bs-toggle="tab" data-bs-target="#nav-size" type="button" role="tab" aria-controls="nav-size" aria-selected="true">
+                    <button class="nav-link complate" id="nav-size-tab" data-bs-toggle="tab" data-bs-target="#nav-size" type="button" role="tab" aria-controls="nav-size" aria-selected="true">
                         <div class="status"></div>
                         <div class="name">Size</div>
                         <div class="value">US Letter 8.5 x 11</div>
@@ -43,12 +43,12 @@
 
                 <div class="groupName">2. Cover Options</div>
                 <div class="list">
-                    <button class="nav-link" id="nav-coverStock-tab" data-bs-toggle="tab" data-bs-target="#nav-coverStock" type="button" role="tab" aria-controls="nav-coverStock" aria-selected="true">
+                    <button class="nav-link complate" id="nav-coverStock-tab" data-bs-toggle="tab" data-bs-target="#nav-coverStock" type="button" role="tab" aria-controls="nav-coverStock" aria-selected="true">
                         <div class="status"></div>
                         <div class="name">Cover Stock</div>
                         <div class="value">92lb Cover 250gsm</div>
                     </button>
-                    <button class="nav-link" id="nav-coverPrinting-tab" data-bs-toggle="tab" data-bs-target="#nav-coverPrinting" type="button" role="tab" aria-controls="nav-coverPrinting" aria-selected="true">
+                    <button class="nav-link active" id="nav-coverPrinting-tab" data-bs-toggle="tab" data-bs-target="#nav-coverPrinting" type="button" role="tab" aria-controls="nav-coverPrinting" aria-selected="true">
                         <div class="status"></div>
                         <div class="name">Cover Printing</div>
                         <div class="value">CMYK Color</div>
@@ -153,7 +153,7 @@
                     <button class="btn-line btn-option" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasOption" aria-controls="offcanvasOption">OPTIONS</button>
                     <button class="btn-line btn-quote" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasQuote" aria-controls="offcanvasQuote">QUOTE</button>
                 </div>
-                <div class="tab-pane fade active show" id="nav-size" role="tabpanel" aria-labelledby="nav-size-tab" tabindex="0">
+                <div class="tab-pane fade" id="nav-size" role="tabpanel" aria-labelledby="nav-size-tab" tabindex="0">
 
                     <h2 class="stepName">size</h2>
                     <div class="conWrap">
@@ -402,11 +402,11 @@
                                   <div id="coverStockColl04" class="accordion-collapse collapse" data-bs-parent="#sideAccCoverStock">
                                     <div class="accordion-body">
                                         <label class="radioUI">
-                                            <input type="radio" name="Uncoated" checked>
+                                            <input type="radio" name="natural" checked>
                                             <div class="item">value</div>
                                         </label>
                                         <label class="radioUI">
-                                            <input type="radio" name="Uncoated">
+                                            <input type="radio" name="natural">
                                             <div class="item">value</div>
                                         </label>
                                     </div>
@@ -421,11 +421,11 @@
                                   <div id="coverStockColl05" class="accordion-collapse collapse" data-bs-parent="#sideAccCoverStock">
                                     <div class="accordion-body">
                                         <label class="radioUI">
-                                            <input type="radio" name="Uncoated" checked>
+                                            <input type="radio" name="premium" checked>
                                             <div class="item">value</div>
                                         </label>
                                         <label class="radioUI">
-                                            <input type="radio" name="Uncoated">
+                                            <input type="radio" name="premium">
                                             <div class="item">value</div>
                                         </label>
                                     </div>
@@ -477,9 +477,147 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="nav-coverPrinting" role="tabpanel" aria-labelledby="nav-coverPrinting-tab" tabindex="0"><h2 class="stepName">coverPrinting</h2></div>
-                <div class="tab-pane fade" id="nav-coverFinish" role="tabpanel" aria-labelledby="nav-coverFinish-tab" tabindex="0"><h2 class="stepName">coverFinish</h2></div>
-                <div class="tab-pane fade" id="nav-addonOptional" role="tabpanel" aria-labelledby="nav-addonOptional-tab" tabindex="0"><h2 class="stepName">addonOptional</h2></div>
+                <div class="tab-pane fade" id="nav-coverPrinting" role="tabpanel" aria-labelledby="nav-coverPrinting-tab" tabindex="0">
+                    <h2 class="stepName">Cover Printing</h2>
+                    <div class="conWrap">
+                        <div class="side">
+                            <div class="radioUIWrap">
+                                <label class="radioUI">
+                                    <input type="radio" name="printing" checked>
+                                    <div class="item">CMYK Color</div>
+                                </label>
+                                <label class="radioUI">
+                                    <input type="radio" name="printing">
+                                    <div class="item">Grayscale</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-coverFinish" role="tabpanel" aria-labelledby="nav-coverFinish-tab" tabindex="0">
+                    <h2 class="stepName">Cover Finish</h2>
+                    <div class="conWrap">
+                        <div class="side">
+                            <div class="radioUIWrap">
+                                <label class="radioUI">
+                                    <input type="radio" name="finish" checked>
+                                    <div class="item">Matt Laminatoin</div>
+                                </label>
+                                <label class="radioUI">
+                                    <input type="radio" name="finish">
+                                    <div class="item">Gloss Laminatoin</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade active show" id="nav-addonOptional" role="tabpanel" aria-labelledby="nav-addonOptional-tab" tabindex="0">
+                    <h2 class="stepName">Add-on</h2>
+                    <div class="conWrap block">
+                        <ul class="appendItemList">
+                            <li class="item">
+                                <div class="name">Add-on 1</div>
+                                <div class="detail">Foil, Gloss gold, Front cover - Size 1/4</div>
+                                <button class="del" type="button"></button>
+                            </li>
+                            <li class="item">
+                                <div class="name">Add-on 2</div>
+                                <div class="detail">UV, Front cover - Size 1/2</div>
+                                <button class="del" type="button"></button>
+                            </li>
+                        </ul>
+                        <div class="addOnForm">
+                            <div class="tabList">
+                                <label class="radio">
+                                    <div class="top">
+                                        <input type="radio" name="addOn">
+                                        <i></i>
+                                        <div class="key">
+                                            Gatefold
+                                        </div>
+                                    </div>
+                                    <div class="imgWrap">
+                                        <img src="./img/img_addon_gatefold.jpg" alt="img">
+                                        <button class="fullImg"></button>
+                                    </div>
+                                </label>
+                                <label class="radio">
+                                    <div class="top">
+                                        <input type="radio" name="addOn">
+                                        <i></i>
+                                        <div class="key">
+                                            Foil stamping
+                                        </div>
+                                    </div>
+                                    <div class="imgWrap">
+                                        <img src="./img/img_addon_foilStamping.jpg" alt="img">
+                                        <button class="fullImg"></button>
+                                    </div>
+                                </label>
+                                <label class="radio">
+                                    <div class="top">
+                                        <input type="radio" name="addOn">
+                                        <i></i>
+                                        <div class="key">
+                                            Spot UV
+                                        </div>
+                                    </div>
+                                    <div class="imgWrap">
+                                        <img src="./img/img_addon_spotUV.jpg" alt="img">
+                                        <button class="fullImg"></button>
+                                    </div>
+                                </label>
+                                <label class="radio">
+                                    <div class="top">
+                                        <input type="radio" name="addOn">
+                                        <i></i>
+                                        <div class="key">
+                                            Embossing
+                                        </div>
+                                    </div>
+                                    <div class="imgWrap">
+                                        <img src="./img/img_addon_embossing.jpg" alt="img">
+                                        <button class="fullImg"></button>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="tabCont">
+                                <div class="optionItem">
+                                    <div class="key">Coating</div>
+                                    <select>
+                                        <option value="Raised UV">Raised UV</option>
+                                        <option value="Raised UV">Raised UV</option>
+                                        <option value="Raised UV">Raised UV</option>
+                                    </select>
+                                </div>
+                                <div class="optionItem">
+                                    <div class="key">Position</div>
+                                    <select>
+                                        <option value="Front Cover and Back Cover">Front Cover and Back Cover</option>
+                                    </select>
+                                </div>
+                                <div class="optionItem">
+                                    <div class="key">Area (Front Cover)</div>
+                                    <select>
+                                        <option value="Less than quarter of cover size">Less than quarter of cover size</option>
+                                    </select>
+                                </div>
+                                <div class="optionItem">
+                                    <div class="key">Area (Back Cover)</div>
+                                    <select>
+                                        <option value="Less than quarter of cover size">Less than quarter of cover size</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="addOnSubmit">
+                                <button class="btn-black" type="button" disabled>Spot UV Selected</button>
+                                <button class="btn-black" type="button">Spot UV Selected</button>
+                                <p>Click this button once you've made your selections.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="tab-pane fade" id="nav-pageCount" role="tabpanel" aria-labelledby="nav-pageCount-tab" tabindex="0"><h2 class="stepName">pageCount</h2></div>
                 <div class="tab-pane fade" id="nav-paperType" role="tabpanel" aria-labelledby="nav-paperType-tab" tabindex="0"><h2 class="stepName">paperType</h2></div>
                 <div class="tab-pane fade" id="nav-printing" role="tabpanel" aria-labelledby="nav-printing-tab" tabindex="0"><h2 class="stepName">printing</h2></div>
@@ -618,7 +756,7 @@
 
         </div>
         <div class="commandFooter">
-            <button class="prev">Previous</button>
+            <button id="prevBtn" class="prev">Previous</button>
             <div class="centerPanel">
                 <div class="spine">Spine Width</div>
                 <div class="value">0.589"</div>
@@ -627,7 +765,7 @@
                 </svg>
                 <a href="https://www.inclpress.com/print-ready-file-guidelines.html" class="guide" target="_blank">Layout Guidelines</a>
             </div>
-            <button class="next">Next</button>
+            <button id="nextBtn" class="next">Next</button>
         </div>
     </section>
     
@@ -647,6 +785,34 @@
                 infinite: true,
             }
         );
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll('#nav-tab .nav-link');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+    
+        function getActiveTabIndex() {
+            return [...tabs].findIndex(tab => tab.classList.contains('active'));
+        }
+    
+        function activateTab(index) {
+            if (index < 0 || index >= tabs.length) return;
+            const tabTrigger = new bootstrap.Tab(tabs[index]);
+            tabTrigger.show();
+        }
+    
+        prevBtn.addEventListener('click', () => {
+            const currentIndex = getActiveTabIndex();
+            activateTab(currentIndex - 1);
+        });
+    
+        nextBtn.addEventListener('click', () => {
+            const currentIndex = getActiveTabIndex();
+            activateTab(currentIndex + 1);
+        });
+        });
     </script>
 </body>
 </html>
