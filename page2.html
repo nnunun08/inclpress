@@ -24,7 +24,7 @@
     </header>
 
     <section class="section">
-        <div class="panel-option">
+        <div class="panel-option offcanvas-xl offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasOption" aria-labelledby="offcanvasOptionLabel">
             <div class="top">
                 PERFECT BINDING
                 <a href="#" class="choose" onclick="location.reload(); return false;">Choose Binding</a>
@@ -148,8 +148,16 @@
                         </li>
                     </ul>
                 </div>
+                <div class="d-mobile">
+                    <button class="btn-line btn-option" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasOption" aria-controls="offcanvasOption">OPTIONS</button>
+                    <button class="btn-line btn-quote" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasQuote" aria-controls="offcanvasQuote">QUOTE</button>
+                </div>
                 <div class="tab-pane fade active show" id="nav-size" role="tabpanel" aria-labelledby="nav-size-tab" tabindex="0">
+
                     <h2 class="stepName">size</h2>
+
+
+
                     <div class="conWrap">
                         <div class="side">
                             <div class="accordion" id="sideAcc">
@@ -221,7 +229,7 @@
                 <div class="tab-pane fade" id="nav-drilling" role="tabpanel" aria-labelledby="nav-drilling-tab" tabindex="0">drilling</div>
             </div>
         </div>
-        <div class="panel-quote">
+        <div class="panel-quote  offcanvas-xl offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasQuote" aria-labelledby="offcanvasQuoteLabel">
             <div class="contents">
                 <div class="group">
                     <div class="input-label">
@@ -358,7 +366,7 @@
                 <svg width="1" height="16" viewBox="0 0 1 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="1" height="16" fill="#ECECEC"/>
                 </svg>
-                <a href="https://www.inclpress.com/print-ready-file-guidelines.html" class="guide">Layout Guidelines</a>
+                <a href="https://www.inclpress.com/print-ready-file-guidelines.html" class="guide" target="_blank">Layout Guidelines</a>
             </div>
             <button class="next">Next</button>
         </div>

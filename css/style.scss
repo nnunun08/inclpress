@@ -1,5 +1,6 @@
 @import url(./reset.css);
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --white: #fff;
@@ -35,6 +36,10 @@ input {
 	outline: none;
 }
 
+.d-mobile {
+	display: none;
+}
+
 .lineClamp3 {
 	overflow:hidden;
 	text-overflow:ellipsis;
@@ -45,10 +50,6 @@ input {
 // 타블렛브레이크 포인트
 @media screen and (max-width:768px) {
 
-}
-// 모바일브레이크 포인트
-@media screen and (max-width:1280px) {
-	
 }
   
 
@@ -105,13 +106,14 @@ input {
 }
 .panel-option {
 	width: 300px;
-	background: #FFF;
+	background: #FFF !important;
 	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
 	position: fixed;
 	top: 73px;
 	left: 0;
 	height: calc(100% - 73px);
 	overflow: auto;
+	padding-bottom: 30px;
 	.top {
 		color: #000;
 		font-family: Poppins;
@@ -772,6 +774,7 @@ input {
 			letter-spacing: -0.32px;
 			margin-left: -16px;
 			min-width: 50px;
+			text-align: center;
 		}
 		.guide {
 			color: #4C79F4;
@@ -970,5 +973,146 @@ input {
 				}
 			}
 		}
+	}
+}
+
+// 모바일브레이크 포인트
+@media screen and (max-width:1200px) {
+	.d-mobile {
+		display: block;
+	}
+	.btn-option {
+		position: absolute;
+		top: 5px;
+		left: 10px;
+	}
+	.btn-quote {
+		position: absolute;
+		top: 5px;
+		right: 10px;
+	}
+
+	$headerHeight : 42px;
+	.header {
+		padding: 0 10px;
+		height: $headerHeight;
+	}
+	.header .name {
+		display: none;
+	}
+	.section {
+		padding-top: $headerHeight;
+	}
+	.panel-option,
+	.panel-quote {
+		top: 0;
+		height: 100%;
+	}
+	.panel-option {
+		// display: none;
+		width: 300px !important;
+		border-right: 0 !important;
+		left: -100%;
+		&.show {
+			left: 0;
+			z-index: 9999;
+		}
+	}
+	.panel-quote {
+		// display: none;
+		max-width: 320px;
+		border-left: 0 !important;
+		right: -100%;
+		&.show {
+			right: 0;
+			z-index: 9999;
+		}
+	}
+	.body .tab-content {
+		padding: 0;
+		max-width: 720px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.body .tab-pane {
+		padding: 13px 0;
+	}
+	#nav-tabContent .stepName {
+		text-align: center;
+		font-size: 14px;
+	}
+	.commandFooter {
+		width: 100%;
+		left: 0;
+		right: 0;
+		padding: 6px 10px;
+	}
+	.commandFooter .centerPanel {
+		// flex-direction: column;
+		background-color: transparent;
+		box-shadow: none;
+		width: 100%;
+		align-items: center;
+		padding: 0px 7px;
+		gap: 2px 12px;
+		svg {
+			display: none;
+		}
+	}
+	.commandFooter .centerPanel .guide,
+	.commandFooter .centerPanel .value,
+	.commandFooter .centerPanel .spine {
+		font-size: 14px;
+	}
+	.commandFooter .next,
+	.commandFooter .prev {
+		text-indent: -9999px;
+		width: 38px;
+		height: 38px;
+		flex: 1 0 auto;
+		padding: 0;
+	}
+	.commandFooter .prev {
+		background: url(../img/ic_prev_arr.svg) center no-repeat;
+	}
+	.commandFooter .next {
+		background: #000 url(../img/ic_next_arr.svg) center no-repeat;
+	}
+	.bindingStyle {
+		margin-top: 13px;
+		margin-bottom: 50px;
+		max-width: 580px;
+	}
+	.bindingStyle ul {
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+	.bindingStyle ul li {
+		width: calc((100% - 20px )/ 2);
+	}
+	.bindingStyle ul li .imgWrap {
+		border-radius: 8px;
+	}
+	#nav-tabContent .conWrap .optionDetail p {
+		font-size: 13px;
+	}
+	#nav-tabContent .conWrap {
+		gap: 16px;
+		padding: 0 10px;
+	}
+	#nav-tabContent .conWrap .optionDetail,
+	#nav-tabContent .conWrap .side {
+		flex: 1 0 0;
+		width: 50%;
+	}
+	#nav-tabContent .conWrap .side .accordion {
+		width: 100%;
+	}
+	#nav-tabContent .conWrap .side .accordion-button {
+		padding: 8px;
+		font-size: 13px;
+	}
+	#nav-tabContent .conWrap .side .accordion-button.collapsed {
+		font-size: 13px;
 	}
 }
