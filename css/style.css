@@ -252,12 +252,15 @@ input {
   letter-spacing: -0.26px;
 }
 
+.body {
+  padding-bottom: 83px;
+}
 .body .tab-content {
   padding: 0 378px 0 300px;
   width: 100%;
 }
 .body .tab-pane {
-  padding: 40px 20px;
+  padding: 40px 20px 100px;
   width: 100%;
 }
 
@@ -344,7 +347,7 @@ input {
   right: 0;
   height: calc(100% - 73px);
   padding-bottom: 146px;
-  background: #FFF;
+  background: #FFF !important;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
 }
 .panel-quote .contents {
@@ -505,6 +508,10 @@ input {
   align-items: flex-start;
   gap: 13px;
   flex: 1 0 0;
+  width: 1px;
+}
+.panel-quote .split-shipping .item input {
+  width: 100%;
 }
 .panel-quote .split-shipping .input-label,
 .panel-quote .split-shipping .inputMsg {
@@ -675,6 +682,39 @@ input {
   letter-spacing: -0.36px;
 }
 
+.radioUI input {
+  display: none;
+}
+.radioUI .item {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 4px;
+  background: #FFF;
+  box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.05);
+  color: #000;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.28px;
+}
+.radioUI :checked + .item {
+  color: #FFF;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  border-radius: 4px;
+  background: radial-gradient(54.1% 81.63% at 49.84% 100%, #7FC6FF 0%, #5A7EE9 100%);
+  box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.05);
+}
+
 .commandFooter {
   position: fixed;
   bottom: 0;
@@ -738,7 +778,7 @@ input {
   padding: 14px 24px;
   align-items: flex-start;
   justify-content: center;
-  gap: 2px 24px;
+  gap: 2px 12px;
 }
 .commandFooter .centerPanel .spine {
   color: rgba(0, 0, 0, 0.8);
@@ -758,7 +798,7 @@ input {
   line-height: normal;
   letter-spacing: -0.32px;
   margin-left: -16px;
-  min-width: 50px;
+  min-width: 70px;
   text-align: center;
 }
 .commandFooter .centerPanel .guide {
@@ -791,16 +831,18 @@ input {
 }
 .bindingStyle ul {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 8px;
   align-self: stretch;
 }
 .bindingStyle ul li {
   cursor: pointer;
   display: flex;
-  width: 216px;
+  flex: 1 0 0;
+  width: 25%;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 15px;
   color: #000;
   text-align: center;
@@ -899,6 +941,22 @@ input {
   line-height: normal;
   letter-spacing: -0.28px;
 }
+#nav-tabContent .conWrap .side .accordion-button.select {
+  border-radius: 4px;
+  border: 2px solid #5A7EE9;
+  background: #FFF;
+  box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.05);
+  color: #000;
+}
+#nav-tabContent .conWrap .side .accordion-button.select.collapsed {
+  border-color: transparent;
+}
+#nav-tabContent .conWrap .side .accordion-button.select::after {
+  display: block;
+  background: url(../img/ic_radioUI_arr.svg) center no-repeat;
+  width: 16px;
+  height: 16px;
+}
 #nav-tabContent .conWrap .side .accordion-item {
   background-color: transparent;
   border: 0;
@@ -927,6 +985,17 @@ input {
   max-width: 560px;
   margin: 0 auto;
 }
+#nav-tabContent .conWrap .optionDetail b {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 25.6px */
+  letter-spacing: -0.32px;
+  margin-bottom: 8px;
+}
 #nav-tabContent .conWrap .optionDetail p {
   color: #000;
   font-family: Pretendard;
@@ -936,6 +1005,23 @@ input {
   line-height: 140%; /* 22.4px */
   letter-spacing: -0.32px;
 }
+#nav-tabContent .conWrap .optionDetail ul li {
+  padding-left: 24px;
+  position: relative;
+}
+#nav-tabContent .conWrap .optionDetail ul li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  top: 11px;
+  left: 10px;
+}
+#nav-tabContent .conWrap .optionDetail li + li {
+  margin-top: 8px;
+}
 #nav-tabContent .conWrap .optionDetail .detailImg {
   text-align: center;
   margin-top: 40px;
@@ -943,6 +1029,46 @@ input {
 #nav-tabContent .conWrap .optionDetail .detailImg img {
   width: 100%;
   max-width: 345px;
+}
+#nav-tabContent .conWrap .optionDetail .thumbImg {
+  aspect-ratio: 1/1;
+  width: 100%;
+  position: relative;
+  margin-bottom: 40px;
+}
+#nav-tabContent .conWrap .optionDetail .thumbImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#nav-tabContent .conWrap .optionDetail .thumbImg .fullImg {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 0;
+  background-color: rgba(239, 239, 239, 0.6);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'><path d='M2 14H8.00098V16H0V8H2V14ZM16 8H14V2H8.00098V0H16V8Z' fill='black'/></svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#nav-tabContent .fullBoard {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #fff;
+  padding: 40px;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.32px;
+}
+#nav-tabContent .fullBoard b {
+  font-weight: 700;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1051,7 +1177,9 @@ input {
     gap: 20px;
   }
   .bindingStyle ul li {
+    flex: 0 0 auto;
     width: calc((100% - 20px) / 2);
+    gap: 8px;
   }
   .bindingStyle ul li .imgWrap {
     border-radius: 8px;

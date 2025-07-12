@@ -33,6 +33,7 @@
 
                 <div class="groupName">1. Book Size</div>
                 <div class="list">
+                    <!-- 입력이 완료된 단계에서는 .nav-link 에 .complate 클래쓰를 넣어주세요 -->
                     <button class="nav-link active complate" id="nav-size-tab" data-bs-toggle="tab" data-bs-target="#nav-size" type="button" role="tab" aria-controls="nav-size" aria-selected="true">
                         <div class="status"></div>
                         <div class="name">Size</div>
@@ -155,19 +156,16 @@
                 <div class="tab-pane fade active show" id="nav-size" role="tabpanel" aria-labelledby="nav-size-tab" tabindex="0">
 
                     <h2 class="stepName">size</h2>
-
-
-
                     <div class="conWrap">
                         <div class="side">
-                            <div class="accordion" id="sideAcc">
+                            <div class="accordion" id="sideAccSize">
                                 <div class="accordion-item">
                                   <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#coll01" aria-expanded="true" aria-controls="coll01">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#bookSizeColl01" aria-expanded="true" data-bs-target="#bookSizeColl01">
                                         Custom Size Enter Width and Height
                                     </button>
                                   </h2>
-                                  <div id="coll01" class="accordion-collapse collapse show" data-bs-parent="#sideAcc">
+                                  <div id="bookSizeColl01" class="accordion-collapse collapse show" data-bs-parent="#sideAccSize">
                                     <div class="accordion-body">
                                       <div class="flex">
                                           <input type="text" class="input" placeholder="width">
@@ -180,29 +178,121 @@
                                 </div>
                                 <div class="accordion-item">
                                   <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coll02" aria-expanded="false" aria-controls="coll02">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bookSizeColl02" aria-expanded="false" data-bs-target="#bookSizeColl02">
                                         Digest 5.5 x 8.5
                                     </button>
                                   </h2>
-                                  <div id="coll02" class="accordion-collapse collapse" data-bs-parent="#sideAcc">
+                                  <div id="bookSizeColl02" class="accordion-collapse collapse" data-bs-parent="#sideAccSize">
                                   </div>
                                 </div>
                                 <div class="accordion-item">
                                   <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coll03" aria-expanded="false" aria-controls="coll03">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bookSizeColl03" aria-expanded="false" data-bs-target="#bookSizeColl03">
                                         US Trade 6 x 9
                                     </button>
                                   </h2>
-                                  <div id="coll03" class="accordion-collapse collapse" data-bs-parent="#sideAcc">
+                                  <div id="bookSizeColl03" class="accordion-collapse collapse" data-bs-parent="#sideAccSize">
                                   </div>
                                 </div>
                                 <div class="accordion-item">
                                   <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coll04" aria-expanded="false" aria-controls="coll04">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bookSizeColl04" aria-expanded="false" data-bs-target="#bookSizeColl04">
                                         Comic Book 6.625 x 10.25
                                     </button>
                                   </h2>
-                                  <div id="coll04" class="accordion-collapse collapse" data-bs-parent="#sideAcc">
+                                  <div id="bookSizeColl04" class="accordion-collapse collapse" data-bs-parent="#sideAccSize">
+                                  </div>
+                                </div>
+
+                                <!--  -->
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bookSizeColl05" aria-expanded="false" data-bs-target="#bookSizeColl05">
+                                        Executive 7 x 10
+                                    </button>
+                                  </h2>
+                                  <div id="bookSizeColl05" class="accordion-collapse collapse" data-bs-parent="#sideAccSize">
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bookSizeColl06" aria-expanded="false" data-bs-target="#bookSizeColl06">
+                                        US Letter 8.5 x 11
+                                    </button>
+                                  </h2>
+                                  <div id="bookSizeColl06" class="accordion-collapse collapse" data-bs-parent="#sideAccSize">
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bookSizeColl07" aria-expanded="false" data-bs-target="#bookSizeColl07">
+                                        Large Portrait 9 x 12
+                                    </button>
+                                  </h2>
+                                  <div id="bookSizeColl07" class="accordion-collapse collapse" data-bs-parent="#sideAccSize">
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bookSizeColl08" aria-expanded="false" data-bs-target="#bookSizeColl08">
+                                        Square 8.5 x 8.5
+                                    </button>
+                                  </h2>
+                                  <div id="bookSizeColl08" class="accordion-collapse collapse" data-bs-parent="#sideAccSize">
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bookSizeColl09" aria-expanded="false" data-bs-target="#bookSizeColl09">
+                                        Large Square 10 x 10
+                                    </button>
+                                  </h2>
+                                  <div id="bookSizeColl09" class="accordion-collapse collapse" data-bs-parent="#sideAccSize">
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bookSizeColl10" aria-expanded="false" data-bs-target="#bookSizeColl10">
+                                        Digest Landscape 8.5 x 5.5
+                                    </button>
+                                  </h2>
+                                  <div id="bookSizeColl10" class="accordion-collapse collapse" data-bs-parent="#sideAccSize">
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bookSizeColl11" aria-expanded="false" data-bs-target="#bookSizeColl11">
+                                        US Letter Landscape 11 x 5.5
+                                    </button>
+                                  </h2>
+                                  <div id="bookSizeColl11" class="accordion-collapse collapse" data-bs-parent="#sideAccSize">
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bookSizeColl12" aria-expanded="false" data-bs-target="#bookSizeColl12">
+                                        Large Landscape 12 x 9
+                                    </button>
+                                  </h2>
+                                  <div id="bookSizeColl12" class="accordion-collapse collapse" data-bs-parent="#sideAccSize">
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bookSizeColl13" aria-expanded="false" data-bs-target="#bookSizeColl13">
+                                        A5 149 210mm
+                                    </button>
+                                  </h2>
+                                  <div id="bookSizeColl13" class="accordion-collapse collapse" data-bs-parent="#sideAccSize">
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bookSizeColl14" aria-expanded="false" data-bs-target="#bookSizeColl14">
+                                        A4 210 297mm
+                                    </button>
+                                  </h2>
+                                  <div id="bookSizeColl14" class="accordion-collapse collapse" data-bs-parent="#sideAccSize">
                                   </div>
                                 </div>
                             </div>
@@ -217,16 +307,185 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="nav-coverStock" role="tabpanel" aria-labelledby="nav-coverStock-tab" tabindex="0">coverStock</div>
-                <div class="tab-pane fade" id="nav-coverPrinting" role="tabpanel" aria-labelledby="nav-coverPrinting-tab" tabindex="0">coverPrinting</div>
-                <div class="tab-pane fade" id="nav-coverFinish" role="tabpanel" aria-labelledby="nav-coverFinish-tab" tabindex="0">coverFinish</div>
-                <div class="tab-pane fade" id="nav-addonOptional" role="tabpanel" aria-labelledby="nav-addonOptional-tab" tabindex="0">addonOptional</div>
-                <div class="tab-pane fade" id="nav-pageCount" role="tabpanel" aria-labelledby="nav-pageCount-tab" tabindex="0">pageCount</div>
-                <div class="tab-pane fade" id="nav-paperType" role="tabpanel" aria-labelledby="nav-paperType-tab" tabindex="0">paperType</div>
-                <div class="tab-pane fade" id="nav-printing" role="tabpanel" aria-labelledby="nav-printing-tab" tabindex="0">printing</div>
-                <div class="tab-pane fade" id="nav-proofing" role="tabpanel" aria-labelledby="nav-proofing-tab" tabindex="0">proofing</div>
-                <div class="tab-pane fade" id="nav-shrinkWrapping" role="tabpanel" aria-labelledby="nav-shrinkWrapping-tab" tabindex="0">shrinkWrapping</div>
-                <div class="tab-pane fade" id="nav-drilling" role="tabpanel" aria-labelledby="nav-drilling-tab" tabindex="0">drilling</div>
+                <div class="tab-pane fade" id="nav-coverStock" role="tabpanel" aria-labelledby="nav-coverStock-tab" tabindex="0">
+                    <h2 class="stepName">Cover Stock</h2>
+                    <div class="conWrap">
+                        <div class="side">
+                            <div class="accordion" id="sideAccCoverStock">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button select" type="button" data-bs-toggle="collapse" data-bs-target="#coverStockColl01" aria-expanded="true" data-bs-target="#coverStockColl01">
+                                        Matte (Satin)
+                                    </button>
+                                  </h2>
+                                  <div id="coverStockColl01" class="accordion-collapse collapse show" data-bs-parent="#sideAccCoverStock">
+                                    <div class="accordion-body">
+                                        <label class="radioUI">
+                                            <input type="radio" name="matte" checked>
+                                            <div class="item">66lb Cover 180gsm</div>
+                                        </label>
+                                        <label class="radioUI">
+                                            <input type="radio" name="matte">
+                                            <div class="item">75lb Cover 200gsm</div>
+                                        </label>
+                                        <label class="radioUI">
+                                            <input type="radio" name="matte">
+                                            <div class="item">92lb Cover 250gsm</div>
+                                        </label>
+                                        <label class="radioUI">
+                                            <input type="radio" name="matte">
+                                            <div class="item">110lb Cover 300gsm</div>
+                                        </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button select collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coverStockColl02" aria-expanded="false" data-bs-target="#coverStockColl02">
+                                        Gloss
+                                    </button>
+                                  </h2>
+                                  <div id="coverStockColl02" class="accordion-collapse collapse" data-bs-parent="#sideAccCoverStock">
+                                    <div class="accordion-body">
+                                        <label class="radioUI">
+                                            <input type="radio" name="gloss" checked>
+                                            <div class="item">value</div>
+                                        </label>
+                                        <label class="radioUI">
+                                            <input type="radio" name="gloss">
+                                            <div class="item">value</div>
+                                        </label>
+                                        <label class="radioUI">
+                                            <input type="radio" name="gloss">
+                                            <div class="item">value</div>
+                                        </label>
+                                        <label class="radioUI">
+                                            <input type="radio" name="gloss">
+                                            <div class="item">value</div>
+                                        </label>
+                                        <label class="radioUI">
+                                            <input type="radio" name="gloss">
+                                            <div class="item">value</div>
+                                        </label>
+                                        <label class="radioUI">
+                                            <input type="radio" name="gloss">
+                                            <div class="item">value</div>
+                                        </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button select collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coverStockColl03" aria-expanded="false" data-bs-target="#coverStockColl03">
+                                        Uncoated, White
+                                    </button>
+                                  </h2>
+                                  <div id="coverStockColl03" class="accordion-collapse collapse" data-bs-parent="#sideAccCoverStock">
+                                    <div class="accordion-body">
+                                        <label class="radioUI">
+                                            <input type="radio" name="Uncoated" checked>
+                                            <div class="item">value</div>
+                                        </label>
+                                        <label class="radioUI">
+                                            <input type="radio" name="Uncoated">
+                                            <div class="item">value</div>
+                                        </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button select collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coverStockColl04" aria-expanded="false" data-bs-target="#coverStockColl04">
+                                        Uncoated, Natural
+                                    </button>
+                                  </h2>
+                                  <div id="coverStockColl04" class="accordion-collapse collapse" data-bs-parent="#sideAccCoverStock">
+                                    <div class="accordion-body">
+                                        <label class="radioUI">
+                                            <input type="radio" name="Uncoated" checked>
+                                            <div class="item">value</div>
+                                        </label>
+                                        <label class="radioUI">
+                                            <input type="radio" name="Uncoated">
+                                            <div class="item">value</div>
+                                        </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button select collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coverStockColl05" aria-expanded="false" data-bs-target="#coverStockColl05">
+                                        Premium
+                                    </button>
+                                  </h2>
+                                  <div id="coverStockColl05" class="accordion-collapse collapse" data-bs-parent="#sideAccCoverStock">
+                                    <div class="accordion-body">
+                                        <label class="radioUI">
+                                            <input type="radio" name="Uncoated" checked>
+                                            <div class="item">value</div>
+                                        </label>
+                                        <label class="radioUI">
+                                            <input type="radio" name="Uncoated">
+                                            <div class="item">value</div>
+                                        </label>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="optionDetail">
+                            <div class="thumbImg">
+                                <!-- 종이이미지 -->
+                                <img src="./img/img_sewn.jpg" alt="thumb">
+                                <button class="fullImg"></button>
+                            </div>
+                            <b>Coated Matte :</b>
+                            <ul>
+                                <li>
+                                    <p>
+                                        Provides matte finishing and little glare when rationed.<br/>
+                                        Enhances visual designs with subdued color<br/>
+                                        representation and suitable for all type of projects.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Creates a rich, subtle matte finished appearance
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="conWrap">
+                        <div class="fullBoard">
+                            <b>Paper weight</b> refers to how thick or heavy the paper is, and it's usually measured in gsm, pounds (lb), or points (pt).<br/>
+                            <br/>
+                            • <b>gsm (grams per square meter)</b> is the most common and accurate unit, used globally.<br/>
+                            • <b>lb (pound)</b> is mainly used in the U.S. for thinner papers like inside pages (text stock).<br/>
+                            • <b>pt (point)</b> is used for thicker papers like covers, where <b>1 pt = 0.001 inches.</b><br/>
+                            <br/>
+                            There are two main types of paper stock:<br/>
+                            • <b>Text stock</b> (also called oﬀset paper) is thinner and used for inner pages. It's measured in <b>lb.</b><br/>
+                            • <b>Cover stock</b> is thicker and sturdier, used for covers, and is measured in <b>pt</b> or high <b>gsm.</b><br/>
+                            <br/>
+                            It’s important to note that a higher number doesn’t always mean thicker paper.<br/>
+                            For example, <b>100 lb text</b> is actually <b>thinner</b> than <b>65 lb cover</b> because they use diﬀerent base sizes.<br/>
+                            <br/>
+                            As a general reference:<br/>
+                            <b>10 pt ≈ 250 gsm, 12 pt ≈ 300 gsm, 14 pt ≈ 350 gsm.</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-coverPrinting" role="tabpanel" aria-labelledby="nav-coverPrinting-tab" tabindex="0"><h2 class="stepName">coverPrinting</h2></div>
+                <div class="tab-pane fade" id="nav-coverFinish" role="tabpanel" aria-labelledby="nav-coverFinish-tab" tabindex="0"><h2 class="stepName">coverFinish</h2></div>
+                <div class="tab-pane fade" id="nav-addonOptional" role="tabpanel" aria-labelledby="nav-addonOptional-tab" tabindex="0"><h2 class="stepName">addonOptional</h2></div>
+                <div class="tab-pane fade" id="nav-pageCount" role="tabpanel" aria-labelledby="nav-pageCount-tab" tabindex="0"><h2 class="stepName">pageCount</h2></div>
+                <div class="tab-pane fade" id="nav-paperType" role="tabpanel" aria-labelledby="nav-paperType-tab" tabindex="0"><h2 class="stepName">paperType</h2></div>
+                <div class="tab-pane fade" id="nav-printing" role="tabpanel" aria-labelledby="nav-printing-tab" tabindex="0"><h2 class="stepName">printing</h2></div>
+                <div class="tab-pane fade" id="nav-proofing" role="tabpanel" aria-labelledby="nav-proofing-tab" tabindex="0"><h2 class="stepName">proofing</h2></div>
+                <div class="tab-pane fade" id="nav-shrinkWrapping" role="tabpanel" aria-labelledby="nav-shrinkWrapping-tab" tabindex="0"><h2 class="stepName">shrinkWrapping</h2></div>
+                <div class="tab-pane fade" id="nav-drilling" role="tabpanel" aria-labelledby="nav-drilling-tab" tabindex="0"><h2 class="stepName">drilling</h2></div>
             </div>
         </div>
         <div class="panel-quote  offcanvas-xl offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasQuote" aria-labelledby="offcanvasQuoteLabel">
@@ -250,11 +509,11 @@
                         <div class="value">$28,590</div>
                     </div>
                     <div class="price">
-                        <div class="key">Price</div>
+                        <div class="key">Price per unit</div>
                         <div class="value">$28,590</div>
                     </div>
                     <div class="price">
-                        <div class="key">Price per unit</div>
+                        <div class="key">Production Time</div>
                         <div class="value">$2.54</div>
                     </div>
                     <div class="divider"></div>
