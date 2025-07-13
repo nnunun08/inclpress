@@ -209,6 +209,7 @@ input {
 		gap: 8px;
 		flex: 1 0 0;
 		align-self: stretch;
+		flex-wrap: nowrap;
 		.groupName {
 			display: flex;
 			height: 40px;
