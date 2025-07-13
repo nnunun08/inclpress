@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Magazine Printing from Korea | High Quality at Lower Costs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="home">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 6L9 12L15 18" stroke="black" stroke-width="2"/>
+            </svg>
+            HOME
+        </a>
+        <div class="name">Instant Printing Quote</div>
+        <a href="#" class="login">Log In</a>
+    </header>
+
+    <section class="section">
+        <div class="panel-option offcanvas-xl offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasOption" aria-labelledby="offcanvasOptionLabel">
+            <div class="top">
+                HARDCOVER BINDING
+                <a href="#" class="choose" onclick="location.reload(); return false;">Choose Binding</a>
+            </div>
+            <div class="nav" id="nav-tab" role="tablist">
+
+                <div class="groupName">1. Book Size</div>
+                <div class="list">
+                    <!-- 입력이 완료된 단계에서는 .nav-link 에 .complate 클래쓰를 넣어주세요 -->
+                    <button class="nav-link complate" id="nav-size-tab" data-bs-toggle="tab" data-bs-target="#nav-size" type="button" role="tab" aria-controls="nav-size" aria-selected="true">
+                        <div class="status"></div>
+                        <div class="name">Size</div>
+                        <!-- .value 는 기본적으로 숨김처리 되어있다가, .complate 들어갈 때 노출됩니다. 또는 직접 생성해주셔도 됩니다. -->
+                        <div class="value">US Letter 8.5" x 11"</div>
+                    </button>
+                    <button class="nav-link" id="nav-spineType-tab" data-bs-toggle="tab" data-bs-target="#nav-spineType" type="button" role="tab" aria-controls="nav-spineType" aria-selected="true">
+                        <div class="status"></div>
+                        <div class="name">Spine Type</div>
+                        <div class="value">value</div>
+                    </button>
+                </div>
+
+                <div class="groupName">2. Coverwrap</div>
+                <div class="list">
+                    <button class="nav-link" id="nav-coverPrinting-tab" data-bs-toggle="tab" data-bs-target="#nav-coverPrinting" type="button" role="tab" aria-controls="nav-coverPrinting" aria-selected="true">
+                        <div class="status"></div>
+                        <div class="name">Cover Printing</div>
+                        <div class="value">CMYK Color</div>
+                    </button>
+                    <button class="nav-link" id="nav-coverFinish-tab" data-bs-toggle="tab" data-bs-target="#nav-coverFinish" type="button" role="tab" aria-controls="nav-coverFinish" aria-selected="true">
+                        <div class="status"></div>
+                        <div class="name">Cover Finish</div>
+                        <div class="value">value</div>
+                    </button>
+                    <button class="nav-link" id="nav-addonOptional-tab" data-bs-toggle="tab" data-bs-target="#nav-addonOptional" type="button" role="tab" aria-controls="nav-addonOptional" aria-selected="true">
+                        <div class="status"></div>
+                        <div class="name">Addon (Optional)</div>
+                        <div class="value">value</div>
+                    </button>
+                </div>
+
+                <!-- 체크박스 on/off에 따라 .nav-link 에 disabled를 넣어주세요 -->
+                <div class="groupName">
+                    <label class="checkboxWrap">
+                        <input type="checkbox">
+                        <div class="checkbox"></div>
+                        Dust Jacket (Optional)
+                    </label>
+                </div>
+                <div class="list">
+                    <button class="nav-link" id="nav-jacketPaper-tab" data-bs-toggle="tab" data-bs-target="#nav-jacketPaper" type="button" role="tab" aria-controls="nav-jacketPaper" aria-selected="true" disabled>
+                        <div class="status"></div>
+                        <div class="name">Paper Type</div>
+                        <div class="value">value</div>
+                    </button>
+                    <button class="nav-link" id="nav-jacketPrinting-tab" data-bs-toggle="tab" data-bs-target="#nav-jacketPrinting" type="button" role="tab" aria-controls="nav-jacketPrinting" aria-selected="true" disabled>
+                        <div class="status"></div>
+                        <div class="name">Printing</div>
+                        <div class="value">value</div>
+                    </button>
+                    <button class="nav-link" id="nav-jacketFinish-tab" data-bs-toggle="tab" data-bs-target="#nav-jacketFinish" type="button" role="tab" aria-controls="nav-jacketFinish" aria-selected="true" disabled>
+                        <div class="status"></div>
+                        <div class="name">Finish</div>
+                        <div class="value">value</div>
+                    </button>
+                    <button class="nav-link" id="nav-jacketAddon-tab" data-bs-toggle="tab" data-bs-target="#nav-jacketAddon" type="button" role="tab" aria-controls="nav-jacketAddon" aria-selected="true" disabled>
+                        <div class="status"></div>
+                        <div class="name">Addon (Optional)</div>
+                        <div class="value">value</div>
+                    </button>
+                </div>
+
+                <div class="groupName">3. End Sheet</div>
+                <div class="list">
+                    <button class="nav-link active" id="nav-endSheetPaper-tab" data-bs-toggle="tab" data-bs-target="#nav-endSheetPaper" type="button" role="tab" aria-controls="nav-endSheetPaper" aria-selected="true">
+                        <div class="status"></div>
+                        <div class="name">Paper Type</div>
+                        <div class="value">value</div>
+                    </button>
+                    <button class="nav-link" id="nav-endSheetPrinting-tab" data-bs-toggle="tab" data-bs-target="#nav-endSheetPrinting" type="button" role="tab" aria-controls="nav-endSheetPrinting" aria-selected="true">
+                        <div class="status"></div>
+                        <div class="name">Printing</div>
+                        <div class="value">value</div>
+                    </button>
+                </div>
+
+                <div class="groupName">4. Interior Pages</div>
+                <div class="list">
+                    <button class="nav-link" id="nav-pageCount-tab" data-bs-toggle="tab" data-bs-target="#nav-pageCount" type="button" role="tab" aria-controls="nav-pageCount" aria-selected="true">
+                        <div class="status"></div>
+                        <div class="name">Page Count</div>
+                        <div class="value">value</div>
+                    </button>
+                    <button class="nav-link" id="nav-paperType-tab" data-bs-toggle="tab" data-bs-target="#nav-paperType" type="button" role="tab" aria-controls="nav-paperType" aria-selected="true">
+                        <div class="status"></div>
+                        <div class="name">Paper Type</div>
+                        <div class="value">value</div>
+                    </button>
+                    <button class="nav-link" id="nav-printing-tab" data-bs-toggle="tab" data-bs-target="#nav-printing" type="button" role="tab" aria-controls="nav-printing" aria-selected="true">
+                        <div class="status"></div>
+                        <div class="name">Printing</div>
+                        <div class="value">value</div>
+                    </button>
+                </div>
+
+                <div class="groupName">5. Artwork</div>
+                <div class="list">
+                    <button class="nav-link" id="nav-proofing-tab" data-bs-toggle="tab" data-bs-target="#nav-proofing" type="button" role="tab" aria-controls="nav-proofing" aria-selected="true">
+                        <div class="status"></div>
+                        <div class="name">Proofing</div>
+                        <div class="value">value</div>
+                    </button>
+                </div>
+
+                <!-- 체크박스 on/off에 따라 .nav-link 에 disabled를 넣어주세요 -->
+                <div class="groupName">
+                    <label class="checkboxWrap">
+                        <input type="checkbox">
+                        <div class="checkbox"></div>
+                        Additional Work (Optional)
+                    </label>
+                </div>
+                <div class="list">
+                    <button class="nav-link" id="nav-shrinkWrapping-tab" data-bs-toggle="tab" data-bs-target="#nav-shrinkWrapping" type="button" role="tab" aria-controls="nav-shrinkWrapping" aria-selected="true">
+                        <div class="status"></div>
+                        <div class="name">Shrink Wrapping</div>
+                        <div class="value">value</div>
+                    </button>
+                    <button class="nav-link" id="nav-slipcase-tab" data-bs-toggle="tab" data-bs-target="#nav-slipcase" type="button" role="tab" aria-controls="nav-slipcase" aria-selected="true">
+                        <div class="status"></div>
+                        <div class="name">Slipcase</div>
+                        <div class="value">value</div>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <div class="body">
+            <div class="tab-content" id="nav-tabContent">
+
+                <div class="d-mobile">
+                    <button class="btn-line btn-option" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasOption" aria-controls="offcanvasOption">OPTIONS</button>
+                    <button class="btn-line btn-quote" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasQuote" aria-controls="offcanvasQuote">QUOTE</button>
+                </div>
+                <div class="tab-pane fade active show" id="nav-endSheetPaper" role="tabpanel" aria-labelledby="nav-endSheetPaper-tab" tabindex="0">
+                    <h2 class="stepName">Choose Endpaper</h2>
+                    <div class="conWrap">
+                        <div class="side">
+                            <div class="accordion" id="sideAccEndSheetPaper">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button select" type="button" data-bs-toggle="collapse" data-bs-target="#endSheetPaperColl01" aria-expanded="true">
+                                        Colored Paper
+                                    </button>
+                                  </h2>
+                                  <div id="endSheetPaperColl01" class="accordion-collapse collapse show" data-bs-parent="#sideAccEndSheetPaper">
+                                    <div class="accordion-body">
+                                        <label class="radioUI colorChip">
+                                            <input type="radio" name="Colored" checked="">
+                                            <div class="item">
+                                                <div class="color" style="background-color: #F6F6F6;"></div>
+                                                Stock White
+                                            </div>
+                                        </label>
+                                        <label class="radioUI colorChip">
+                                            <input type="radio" name="Colored">
+                                            <div class="item">
+                                                <div class="color" style="background-color: #363636;"></div>
+                                                Stock Black
+                                            </div>
+                                        </label>
+                                        <label class="radioUI colorChip">
+                                            <input type="radio" name="Colored">
+                                            <div class="item">
+                                                <div class="color" style="background-color: #541964;"></div>
+                                                Amethyst
+                                            </div>
+                                        </label>
+                                        <label class="radioUI colorChip">
+                                            <input type="radio" name="Colored">
+                                            <div class="item">
+                                                <div class="color" style="background-color: #069AF3;"></div>
+                                                Azure Blue
+                                            </div>
+                                        </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button select collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#endSheetPaperColl02" aria-expanded="false">
+                                        Uncoated
+                                    </button>
+                                  </h2>
+                                  <div id="endSheetPaperColl02" class="accordion-collapse collapse" data-bs-parent="#sideAccEndSheetPaper">
+                                    <div class="accordion-body">
+                                        <label class="radioUI colorChip">
+                                            <input type="radio" name="Uncoated" checked="">
+                                            <div class="item">
+                                                <div class="color" style="background-color: #F6F6F6;"></div>
+                                                Stock White
+                                            </div>
+                                        </label>
+                                        <label class="radioUI colorChip">
+                                            <input type="radio" name="Uncoated">
+                                            <div class="item">
+                                                <div class="color" style="background-color: #363636;"></div>
+                                                Stock Black
+                                            </div>
+                                        </label>
+                                        <label class="radioUI colorChip">
+                                            <input type="radio" name="Uncoated">
+                                            <div class="item">
+                                                <div class="color" style="background-color: #541964;"></div>
+                                                Amethyst
+                                            </div>
+                                        </label>
+                                        <label class="radioUI colorChip">
+                                            <input type="radio" name="Uncoated">
+                                            <div class="item">
+                                                <div class="color" style="background-color: #069AF3;"></div>
+                                                Azure Blue
+                                            </div>
+                                        </label>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="optionDetail">
+                            <div class="thumbImg">
+                                <!-- 종이이미지 -->
+                                <img src="./img/img_sewn.jpg" alt="thumb">
+                                <button class="fullImg"></button>
+                            </div>
+                            <b>Colored Paper :</b>
+                            <ul>
+                                <li>
+                                    <p>
+                                        Provides matte finishing and little glare when rationed.<br/>
+                                        Enhances visual designs with subdued color<br/>
+                                        representation and suitable for all type of projects.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Creates a rich, subtle matte finished appearance
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-quote  offcanvas-xl offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasQuote" aria-labelledby="offcanvasQuoteLabel">
+            <div class="contents">
+                <div class="group">
+                    <div class="input-label">
+                        <strong>Quantity</strong>
+                        Starts at 300 Copies
+                    </div>
+                    <div class="inputBx">
+                        <input class="input" type="text" placeholder="300">
+                        <button class="btn-line">Update</button>
+                    </div>
+                </div>
+                <div class="shipping">
+                    <div class="est">Est. Shipping</div>
+                    <div class="date">Friday, June 20</div>
+                    <div class="divider"></div>
+                    <div class="price sum">
+                        <div class="key">Price</div>
+                        <div class="value">$28,590</div>
+                    </div>
+                    <div class="price">
+                        <div class="key">Price per unit</div>
+                        <div class="value">$28,590</div>
+                    </div>
+                    <div class="price">
+                        <div class="key">Production Time</div>
+                        <div class="value">$2.54</div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info">
+                        <div class="ic-check">
+                            <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.134766 4.63867L1.0918 3.68164L3.53906 6.07422L8.70703 0.933594L9.67773 1.89062L3.53906 8.01562L0.134766 4.63867Z" fill="#1BD396"/>
+                            </svg>                                
+                        </div>
+                        <div>High Quaity Printing with Heidelberg Offset Press</div>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="input-label">
+                        Shipping Address
+                    </div>
+                    <div class="inputBx">
+                        <input class="input" type="text" placeholder="Enter your zip code">
+                        <button class="btn-line">Apply</button>
+                    </div>
+                    <div class="inputMsg">Wrong zip code</div>
+                </div>
+                <div class="group">
+                    <ul class="radioGroup">
+                        <li>
+                            <label class="radio">
+                                <input type="radio" name="shipType" checked>
+                                <i></i>
+                                <div class="key">
+                                    Expedited approx. 23 days <br/>
+                                    (Ocean & Ground)
+                                </div>
+                                <div class="value">$2,650</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="radio">
+                                <input type="radio" name="shipType">
+                                <i></i>
+                                <div class="key">
+                                    Air Express 2 3 days
+                                </div>
+                                <div class="value">$2,650</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="radio">
+                                <input type="radio" name="shipType">
+                                <i></i>
+                                <div class="key">
+                                    Split Shipping
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <div class="split-shipping">
+                        <div class="split">
+                            <div class="item">
+                                <div class="input-label">
+                                    Expedited<br/>
+                                    approx. 23 days
+                                </div>
+                                <input type="text" class="input" placeholder="Enter quantity">
+                                <div class="price">$8,650</div>
+                            </div>
+                            <div class="item">
+                                <div class="input-label">
+                                    Air Express<br/>
+                                    2 3 days
+                                </div>
+                                <input type="text" class="input" placeholder="Enter quantity">
+                                <div class="price">$8,650</div>
+                            </div>
+                        </div>
+                        <div class="inputMsg">총 주문 수량과 일치하지 않습니다</div>
+                        <button class="btn-line">Update</button>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="paymentInfo">
+                        Once your order is placed, well send you an invoice<br/>
+                        via Payoneer, a secure B2B payment platform.<br/>
+                        <strong>Bank Transfer / Credit Card / ACH / PayPal</strong>
+                    </div>
+                </div>
+                <a href="#" class="viewSummary">View Summary</a>
+                <a href="#" class="viewSummary ac">View Summary</a>
+            </div>
+
+            <div class="TOTAL">
+                <div class="flex">
+                    <div class="key">TOTAL</div>
+                    <div class="total-price">
+                        <em>$</em>
+                        <div class="value">31,240</div>
+                    </div>
+                </div>
+                <button class="CTA">ORDER NOW</button>
+            </div>
+
+        </div>
+        <div class="commandFooter">
+            <button id="prevBtn" class="prev">Back</button>
+            <div class="centerPanel">
+                <div class="spine">Spine Width</div>
+                <div class="value">0.589"</div>
+                <svg width="1" height="16" viewBox="0 0 1 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="1" height="16" fill="#ECECEC"/>
+                </svg>
+                <a href="https://www.inclpress.com/print-ready-file-guidelines.html" class="guide" target="_blank">Layout Guidelines</a>
+            </div>
+            <button id="nextBtn" class="next">Next</button>
+        </div>
+    </section>
+    
+
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+    <!-- SLICK -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script>
+        $('.imgSlide').slick(
+            {
+                dots: true,
+                infinite: true,
+            }
+        );
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll('#nav-tab .nav-link');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+    
+        function getActiveTabIndex() {
+            return [...tabs].findIndex(tab => tab.classList.contains('active'));
+        }
+    
+        function activateTab(index) {
+            if (index < 0 || index >= tabs.length) return;
+            const tabTrigger = new bootstrap.Tab(tabs[index]);
+            tabTrigger.show();
+        }
+    
+        prevBtn.addEventListener('click', () => {
+            const currentIndex = getActiveTabIndex();
+            activateTab(currentIndex - 1);
+        });
+    
+        nextBtn.addEventListener('click', () => {
+            const currentIndex = getActiveTabIndex();
+            activateTab(currentIndex + 1);
+        });
+        });
+    </script>
+</body>
+</html>

@@ -34,7 +34,7 @@
                 <div class="groupName">1. Book Size</div>
                 <div class="list">
                     <!-- 입력이 완료된 단계에서는 .nav-link 에 .complate 클래쓰를 넣어주세요 -->
-                    <button class="nav-link complate active" id="nav-size-tab" data-bs-toggle="tab" data-bs-target="#nav-size" type="button" role="tab" aria-controls="nav-size" aria-selected="true">
+                    <button class="nav-link complate" id="nav-size-tab" data-bs-toggle="tab" data-bs-target="#nav-size" type="button" role="tab" aria-controls="nav-size" aria-selected="true">
                         <div class="status"></div>
                         <div class="name">Size</div>
                         <!-- .value 는 기본적으로 숨김처리 되어있다가, .complate 들어갈 때 노출됩니다. 또는 직접 생성해주셔도 됩니다. -->
@@ -49,17 +49,17 @@
                         <div class="name">Cover Stock</div>
                         <div class="value">92lb Cover 250gsm</div>
                     </button>
-                    <button class="nav-link" id="nav-coverPrinting-tab" data-bs-toggle="tab" data-bs-target="#nav-coverPrinting" type="button" role="tab" aria-controls="nav-coverPrinting" aria-selected="true">
+                    <button class="nav-link complate" id="nav-coverPrinting-tab" data-bs-toggle="tab" data-bs-target="#nav-coverPrinting" type="button" role="tab" aria-controls="nav-coverPrinting" aria-selected="true">
                         <div class="status"></div>
                         <div class="name">Cover Printing</div>
                         <div class="value">CMYK Color</div>
                     </button>
-                    <button class="nav-link" id="nav-coverFinish-tab" data-bs-toggle="tab" data-bs-target="#nav-coverFinish" type="button" role="tab" aria-controls="nav-coverFinish" aria-selected="true">
+                    <button class="nav-link complate" id="nav-coverFinish-tab" data-bs-toggle="tab" data-bs-target="#nav-coverFinish" type="button" role="tab" aria-controls="nav-coverFinish" aria-selected="true">
                         <div class="status"></div>
                         <div class="name">Cover Finish</div>
                         <div class="value">value</div>
                     </button>
-                    <button class="nav-link" id="nav-addonOptional-tab" data-bs-toggle="tab" data-bs-target="#nav-addonOptional" type="button" role="tab" aria-controls="nav-addonOptional" aria-selected="true">
+                    <button class="nav-link complate" id="nav-addonOptional-tab" data-bs-toggle="tab" data-bs-target="#nav-addonOptional" type="button" role="tab" aria-controls="nav-addonOptional" aria-selected="true">
                         <div class="status"></div>
                         <div class="name">Addon Optional</div>
                         <div class="value">value</div>
@@ -68,17 +68,17 @@
 
                 <div class="groupName">3. Interior Pages</div>
                 <div class="list">
-                    <button class="nav-link" id="nav-pageCount-tab" data-bs-toggle="tab" data-bs-target="#nav-pageCount" type="button" role="tab" aria-controls="nav-pageCount" aria-selected="true">
+                    <button class="nav-link complate" id="nav-pageCount-tab" data-bs-toggle="tab" data-bs-target="#nav-pageCount" type="button" role="tab" aria-controls="nav-pageCount" aria-selected="true">
                         <div class="status"></div>
                         <div class="name">Page Count</div>
                         <div class="value">value</div>
                     </button>
-                    <button class="nav-link" id="nav-paperType-tab" data-bs-toggle="tab" data-bs-target="#nav-paperType" type="button" role="tab" aria-controls="nav-paperType" aria-selected="true">
+                    <button class="nav-link complate" id="nav-paperType-tab" data-bs-toggle="tab" data-bs-target="#nav-paperType" type="button" role="tab" aria-controls="nav-paperType" aria-selected="true">
                         <div class="status"></div>
                         <div class="name">Paper Type</div>
                         <div class="value">value</div>
                     </button>
-                    <button class="nav-link" id="nav-printing-tab" data-bs-toggle="tab" data-bs-target="#nav-printing" type="button" role="tab" aria-controls="nav-printing" aria-selected="true">
+                    <button class="nav-link complate" id="nav-printing-tab" data-bs-toggle="tab" data-bs-target="#nav-printing" type="button" role="tab" aria-controls="nav-printing" aria-selected="true">
                         <div class="status"></div>
                         <div class="name">Printing</div>
                         <div class="value">value</div>
@@ -87,7 +87,7 @@
 
                 <div class="groupName">4. Artwork</div>
                 <div class="list">
-                    <button class="nav-link" id="nav-proofing-tab" data-bs-toggle="tab" data-bs-target="#nav-proofing" type="button" role="tab" aria-controls="nav-proofing" aria-selected="true">
+                    <button class="nav-link complate" id="nav-proofing-tab" data-bs-toggle="tab" data-bs-target="#nav-proofing" type="button" role="tab" aria-controls="nav-proofing" aria-selected="true">
                         <div class="status"></div>
                         <div class="name">Proofing</div>
                         <div class="value">value</div>
@@ -96,13 +96,13 @@
 
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
-                        <button class="accordion-button collapsed groupName" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <button class="accordion-button groupName" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                             <div class="checkbox"></div>
                             Additional Work (Optional)
                         </button>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
                             <div class="list">
-                                <button class="nav-link" id="nav-shrinkWrapping-tab" data-bs-toggle="tab" data-bs-target="#nav-shrinkWrapping" type="button" role="tab" aria-controls="nav-shrinkWrapping" aria-selected="true">
+                                <button class="nav-link active" id="nav-shrinkWrapping-tab" data-bs-toggle="tab" data-bs-target="#nav-shrinkWrapping" type="button" role="tab" aria-controls="nav-shrinkWrapping" aria-selected="true">
                                     <div class="status"></div>
                                     <div class="name">Shrink Wrapping</div>
                                     <div class="value">value</div>
@@ -154,7 +154,7 @@
                     <button class="btn-line btn-option" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasOption" aria-controls="offcanvasOption">OPTIONS</button>
                     <button class="btn-line btn-quote" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasQuote" aria-controls="offcanvasQuote">QUOTE</button>
                 </div>
-                <div class="tab-pane fade active show" id="nav-size" role="tabpanel" aria-labelledby="nav-size-tab" tabindex="0">
+                <div class="tab-pane fade" id="nav-size" role="tabpanel" aria-labelledby="nav-size-tab" tabindex="0">
 
                     <h2 class="stepName">size</h2>
                     <div class="conWrap">
@@ -663,8 +663,48 @@
                 </div>
                 <div class="tab-pane fade" id="nav-shrinkWrapping" role="tabpanel" aria-labelledby="nav-shrinkWrapping-tab" tabindex="0">
                     <h2 class="stepName">Shrink Wrapping (Optional)</h2>
+                    <div class="conWrap">
+                        <div class="side">
+                            <div class="radioUIWrap">
+                                <label class="radioUI">
+                                    <input type="radio" name="shrinkWrapping">
+                                    <div class="item">Shrink Wrapping</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="optionDetail">
+                            <div class="thumbImg">
+                                <!-- 이미지 -->
+                                <img src="./img/img_sewn.jpg" alt="thumb">
+                            </div>
+                            <p>
+                                Shrink wrapping option per copy or multiple copies. The minimum and maximum quantity per bundle varies by size and thickness of the online printing product ordered. When you place an order, write the number of copies for wrapping in the additional request.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="tab-pane fade" id="nav-drilling" role="tabpanel" aria-labelledby="nav-drilling-tab" tabindex="0"><h2 class="stepName">drilling</h2></div>
+                <div class="tab-pane fade active show" id="nav-drilling" role="tabpanel" aria-labelledby="nav-drilling-tab" tabindex="0">
+                    <h2 class="stepName">Drilling (Optional)</h2>
+                    <div class="conWrap">
+                        <div class="side">
+                            <div class="radioUIWrap">
+                                <label class="radioUI">
+                                    <input type="radio" name="drilling">
+                                    <div class="item">3 Hole Drilling</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="optionDetail">
+                            <div class="thumbImg">
+                                <!-- 펀칭 이미지 -->
+                                <img src="./img/img_sewn.jpg" alt="thumb">
+                            </div>
+                            <p>
+                                Drilling is available as an option for hole punching. If youd like to include it, simply select the drilling option when placing your order. If you have specific requirements such as the number or size of holes, please include them in the Additional Requests section during checkout.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="panel-quote  offcanvas-xl offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasQuote" aria-labelledby="offcanvasQuoteLabel">
