@@ -1013,11 +1013,27 @@ input {
   display: flex;
   gap: 20px;
   width: 100%;
+  position: relative;
 }
-#nav-tabContent .conWrap .side {
+#nav-tabContent .conWrap:has(.side)::before {
+  content: "";
+  display: block;
   flex: 1 0 0;
   max-width: 309px;
   width: 1px;
+}
+#nav-tabContent .conWrap .side {
+  z-index: 0;
+  flex: 1 0 0;
+  max-width: 309px;
+  width: 1px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 309px;
+  max-width: calc((100% - 60px) / 2);
+  height: 100%;
+  overflow: auto;
 }
 #nav-tabContent .conWrap .side .accordion {
   display: flex;
@@ -1205,6 +1221,8 @@ input {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  container-type: inline-size;
+  container-name: tabList;
 }
 .addOnForm .tabList {
   display: flex;
@@ -1321,6 +1339,19 @@ input {
   line-height: 140%; /* 19.6px */
   letter-spacing: -0.28px;
   margin-top: 8px;
+}
+@container tabList (max-width:579px) {
+  .addOnForm .tabList {
+    flex-wrap: wrap;
+  }
+  .addOnForm .tabList .radio {
+    width: 50%;
+    flex-basis: 40%;
+  }
+  .addOnForm .tabList .imgWrap .fullImg {
+    right: 10px;
+    bottom: 10px;
+  }
 }
 
 .appendItemList {
@@ -1467,8 +1498,26 @@ input {
 }
 
 @media screen and (max-width: 1200px) {
+  .body {
+    padding-bottom: 50px;
+  }
   .d-mobile {
     display: block;
+  }
+  .processBar {
+    position: fixed;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .processBar .percent {
+    transition: 0.2s;
+    background-color: #4C79F4;
+    height: 100%;
+    min-width: 1px;
   }
   .btn-option {
     position: absolute;
@@ -1525,6 +1574,7 @@ input {
   #nav-tabContent .stepName {
     text-align: center;
     font-size: 14px;
+    padding-inline: 90px;
   }
   .commandFooter {
     width: 100%;
@@ -1532,6 +1582,7 @@ input {
     right: 0;
     padding: 0 10px;
     height: 50px;
+    z-index: 2;
   }
   .commandFooter .centerPanel {
     background-color: transparent;
@@ -1587,8 +1638,11 @@ input {
     gap: 16px;
     padding: 0 10px;
   }
-  #nav-tabContent .conWrap .optionDetail,
   #nav-tabContent .conWrap .side {
+    left: 10px;
+    max-width: calc((100% - 36px) / 2);
+  }
+  #nav-tabContent .conWrap .optionDetail {
     flex: 1 0 0;
     width: 50%;
   }
@@ -1600,14 +1654,32 @@ input {
     padding: 8px;
     font-size: 13px;
   }
+  #nav-tabContent .conWrap .side .accordion-body {
+    padding: 4px 4px 10px;
+  }
   #nav-tabContent .conWrap .side .accordion-button.collapsed {
     font-size: 13px;
+  }
+  #nav-tabContent .conWrap .optionDetail ul li {
+    padding-left: 10px;
+  }
+  #nav-tabContent .conWrap .optionDetail ul li::before {
+    top: 7px;
+    left: 2px;
+  }
+  #nav-tabContent .conWrap .optionDetail .thumbImg {
+    margin-bottom: 20px;
   }
   #nav-tabContent .conWrap .optionDetail .thumbImg .fullImg {
     bottom: 8px;
     right: 8px;
     width: 42px;
     height: 42px;
+  }
+  #nav-tabContent .fullBoard {
+    padding: 40px 10px;
+    font-size: 13px;
+    margin-top: 30px;
   }
   .radioUI .item {
     padding: 12px 8px;
@@ -1620,5 +1692,31 @@ input {
   .radioUI.colorChip .color {
     width: 24px;
     height: 24px;
+  }
+  .addOnForm .tabCont .optionItem {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .addOnForm .tabList .top {
+    margin-bottom: 8px;
+  }
+  .addOnForm .tabCont .key {
+    width: 100%;
+  }
+  .addOnForm .tabCont select {
+    flex-basis: auto;
+    max-width: none;
+    width: 100%;
+  }
+  .addOnForm .tabCont .optionItem + .optionItem {
+    margin-top: 16px;
+  }
+  .appendItemList .name {
+    font-size: 14px;
+    width: 64px;
+  }
+  .appendItemList .detail {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=style.css.map */
