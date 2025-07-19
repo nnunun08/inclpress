@@ -126,6 +126,53 @@ input {
   line-height: normal;
   letter-spacing: -0.32px;
 }
+.header .dropdown {
+  margin-right: -16px;
+}
+.header .dropdown .dropdown-toggle {
+  color: #000;
+  text-align: right;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  padding: 9.5px 0;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+}
+.header .dropdown .dropdown-menu {
+  border-radius: 8px;
+  border: 1px solid #FFF;
+  background: #FFF;
+  box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.12);
+}
+.header .dropdown .dropdown-menu .dropdown-item {
+  background-color: transparent;
+  padding: 0 20px;
+  line-height: 32px;
+  height: 32px;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.32px;
+}
+.header .dropdown .dropdown-menu .dropdown-item:hover {
+  color: #4C79F4;
+}
+.header .dropdown .dropdown-menu li + li {
+  margin-top: 4px;
+}
+.header .dropdown .dropdown-menu hr {
+  margin: 4px 0;
+  border-top-color: #F6F6F6;
+  height: 1px;
+  opacity: 1;
+}
 
 .section {
   padding-top: 73px;
@@ -354,6 +401,7 @@ input {
   align-items: center;
   gap: 10px;
   flex: 1 0 0;
+  resize: none;
 }
 .input::placeholder {
   color: #CCC;
@@ -362,7 +410,14 @@ input {
   border-color: #4C79F4;
 }
 
+textarea {
+  min-height: 200px;
+}
+
 .btn-line {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 4px;
   border: 1px solid #000;
   background: #FFF;
@@ -374,14 +429,15 @@ input {
   line-height: normal;
   letter-spacing: -0.28px;
   height: 40px;
+  padding: 0 12px;
 }
 
 .btn-black {
-  display: flex;
-  height: 40px;
-  padding: 10px 12px;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 12px;
   gap: 10px;
   align-self: stretch;
   border-radius: 4px;
@@ -393,6 +449,7 @@ input {
   font-weight: 600;
   line-height: normal;
   letter-spacing: -0.28px;
+  border: 0;
 }
 .btn-black:disabled {
   background: #D2D4D7;
@@ -1409,14 +1466,17 @@ input {
   aspect-ratio: 41/58;
   flex-shrink: 0;
 }
-.printModal .modal-content .modal-header {
+.printModal .modal-header {
   padding: 0;
   border: 0;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 30px;
 }
-.printModal .modal-content .modal-header h1 {
+.printModal .modal-body {
+  padding: 0;
+}
+.printModal h1 {
   color: #000;
   font-family: Pretendard;
   font-size: 32px;
@@ -1425,7 +1485,7 @@ input {
   line-height: normal;
   letter-spacing: -0.64px;
 }
-.printModal .modal-content .modal-header a {
+.printModal a {
   color: #4C79F4;
   font-family: Pretendard;
   font-size: 16px;
@@ -1434,59 +1494,56 @@ input {
   line-height: 140%; /* 22.4px */
   letter-spacing: -0.32px;
 }
-.printModal .modal-content .modal-body {
-  padding: 0;
-}
-.printModal .modal-content .modal-body .printGroup {
+.printModal .printGroup {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.printModal .modal-content .modal-body .printGroup h3 {
+.printModal .printGroup h3 {
   padding-top: 10px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   color: #000;
   font-family: Pretendard;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   letter-spacing: -0.36px;
   text-transform: capitalize;
 }
-.printModal .modal-content .modal-body .printGroup .between {
+.printModal .printGroup .between {
   display: flex;
   justify-content: space-between;
 }
-.printModal .modal-content .modal-body .printGroup .key {
+.printModal .printGroup .key {
   color: rgba(0, 0, 0, 0.7);
   font-family: Pretendard;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.32px;
   text-transform: capitalize;
 }
-.printModal .modal-content .modal-body .printGroup .value {
+.printModal .printGroup .value {
   color: rgba(0, 0, 0, 0.7);
   text-align: right;
   font-family: Pretendard;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.32px;
 }
-.printModal .modal-content .modal-body .printGroup .total {
+.printModal .printGroup .total {
   margin-top: 17px;
   display: flex;
   justify-content: space-between;
   padding-top: 9px;
   border-top: 2px solid #000;
 }
-.printModal .modal-content .modal-body .printGroup .total .key,
-.printModal .modal-content .modal-body .printGroup .total .value {
+.printModal .printGroup .total .key,
+.printModal .printGroup .total .value {
   color: #000;
   font-family: Pretendard;
   font-size: 24px;
@@ -1495,6 +1552,343 @@ input {
   line-height: normal;
   letter-spacing: -0.48px;
   text-transform: capitalize;
+}
+
+.overview-page {
+  background-color: #fff;
+  padding-bottom: 160px;
+}
+.overview-page .inner {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+.overview-page h1 {
+  color: #000;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.64px;
+  margin-top: 160px;
+  margin-bottom: 80px;
+}
+.overview-page .between {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+.overview-page .between .item {
+  flex: 1 0 0;
+  width: 50%;
+}
+.overview-page .between h2 {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+.overview-page .between p {
+  word-break: keep-all;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.32px;
+}
+.overview-page .tableWrap {
+  overflow: auto;
+}
+.overview-page .table {
+  min-width: 50vw;
+  margin-bottom: 40px;
+}
+.overview-page .table th {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  text-transform: capitalize;
+  padding: 0;
+  padding-right: 4px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #000;
+}
+.overview-page .table td {
+  padding: 20px 0;
+  padding-right: 4px;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  letter-spacing: -0.28px;
+  text-transform: capitalize;
+  border-bottom: 1px solid #BFBFBF;
+}
+.overview-page .table td b {
+  font-weight: 700;
+}
+.overview-page .table .dis {
+  opacity: 0.25;
+}
+.overview-page .table .dis .alarm {
+  opacity: 0;
+  pointer-events: none;
+}
+.overview-page .paginationWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  overflow: hidden;
+}
+.overview-page .pagination-range {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  text-transform: capitalize;
+}
+.overview-page .pagination {
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.overview-page .pagination .page-link {
+  border-radius: 4px;
+  border: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  text-transform: capitalize;
+  border: 0;
+}
+.overview-page .pagination .active .page-link {
+  color: #fff;
+  background: #111;
+}
+.overview-page .pagination .arr {
+  text-indent: -9999px;
+  background: url(../img/ic_pagelink_arr.svg) center no-repeat;
+}
+.overview-page .pagination .arrarr {
+  text-indent: -9999px;
+  background: url(../img/ic_pagelink_arr2.svg) center no-repeat;
+}
+.overview-page .pagination .arr-r {
+  transform: rotate(180deg);
+}
+
+.quoteSummary-page {
+  background-color: #fff;
+  padding-bottom: 160px;
+}
+.quoteSummary-page .inner {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 760px;
+}
+.quoteSummary-page .printModal {
+  padding: 60px 0 40px;
+}
+.quoteSummary-page .noticeGroup {
+  margin-top: 60px;
+}
+.quoteSummary-page h2 {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.48px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.quoteSummary-page li,
+.quoteSummary-page p {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.32px;
+}
+.quoteSummary-page b {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: -0.32px;
+}
+.quoteSummary-page li {
+  padding-left: 20px;
+  position: relative;
+  text-indent: -16px;
+}
+.quoteSummary-page .form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.quoteSummary-page .form .form-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+.quoteSummary-page .form .form-row .input-label {
+  margin-top: 10.5px;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  flex: 0 0 180px;
+}
+.quoteSummary-page .form .form-row .inputBx {
+  flex: 1 0 0;
+  max-width: 540px;
+}
+.quoteSummary-page .form .form-row.btnWrap {
+  justify-content: flex-end;
+}
+
+.popup .modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 30px 20px 30px;
+  border-radius: 8px;
+  background: #FFF;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.32px;
+}
+.popup h3 {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.42px;
+  margin-bottom: 20px;
+}
+.popup .btnWrap {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.popup .between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.popup .between h3 {
+  margin: 0;
+}
+.popup .percent {
+  color: #4C79F4;
+  text-align: right;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.32px;
+}
+.popup .percentBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.popup .percentBar .bar {
+  height: 5px;
+  background: #0579FD;
+}
+.popup .fileWrap {
+  display: flex;
+  gap: 8px;
+}
+.popup .fileList {
+  height: 128px;
+  overflow: auto;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  flex: 1 0 0;
+  border-radius: 8px;
+  background: #F6F6F6;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.32px;
+}
+.popup .input {
+  border-radius: 4px;
+  border: 1px solid #F6F6F6;
+  background: #F6F6F6;
+}
+.popup .closeBtn {
+  text-indent: -9999px;
+  border: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent url(../img/ic_modalClose.svg) center no-repeat;
+  position: absolute;
+  top: 40px;
+  right: 30px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1718,5 +2112,19 @@ input {
   }
   .appendItemList .detail {
     font-size: 14px;
+  }
+  .quoteSummary-page .form .form-row {
+    flex-direction: column;
+  }
+  .quoteSummary-page .form .form-row .input-label {
+    flex: 0 0 auto;
+    margin: 0;
+  }
+  .quoteSummary-page .form .form-row .inputBx {
+    width: 100%;
+    max-width: none;
+  }
+  .quoteSummary-page .form .form-row.btnWrap {
+    flex-direction: row;
   }
 }/*# sourceMappingURL=style.css.map */

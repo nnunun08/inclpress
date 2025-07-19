@@ -13,11 +13,156 @@
 </head>
 <body>
 
-    <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Quote Summary modal
     </button>
-    <!-- Modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#successfully">
+        alert
+    </button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmation">
+        Proof Confirmation
+    </button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#changed">
+        Password successfuly changed
+    </button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#upload">
+        File Upload
+    </button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reset">
+        New Password - reset
+    </button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#password">
+        New Password
+    </button>
+
+    <!-- alert -->
+    <div class="modal fade popup" id="successfully" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 420px;">
+        <div class="modal-content">
+            <div class="modal-body">
+                Thank you! Your order has been received successfully.
+                <div class="btnWrap">
+                    <button class="btn-black" data-bs-dismiss="modal">Confirm</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Proof Confirmation -->
+    <div class="modal fade popup" id="confirmation" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 720px;">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div>
+                    <h3>Proof Confirmation</h3>
+                    Have you finished reviewing the selected e-proof files ? Approve your proof files to start<br/>
+                    production.<br/>
+                    Please note printing wil not begin if payment has not been made.<br/>
+                    <br/>                    
+                    inclpress is not responsible for any printing errors caused due to insufficient art work files<br/>
+                    that have already been e-proof confirmed. Printing errors in size, CMYK color, font<br/>
+                    embodiment, bleed, or image resolutions are not subject to our reprint or refund policies.
+                </div>
+                <div class="btnWrap">
+                    <button class="btn-black" data-bs-dismiss="modal">Confirm</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Password successfuly changed -->
+    <div class="modal fade popup" id="changed" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 420px;">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div>
+                    <h3>Password successfuly changed</h3>
+                    You can now login with your new password.
+                </div>
+                <div class="btnWrap">
+                    <button class="btn-black" data-bs-dismiss="modal">Back to Log In</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- New Password - reset -->
+    <div class="modal fade popup" id="upload" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 520px;">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="percentBar">
+                    <div class="bar" style="width: 50%;"></div>
+                </div>
+                <div>
+                    <div class="between">
+                        <h3>File Upload</h3>
+                        <div class="percent">50% uploaded</div>
+                    </div>
+                    <div class="fileWrap">
+                        <label class="btn-line">
+                            Browse
+                            <input type="file" class="btn-line" style="display: none;">
+                        </label>
+                        <div class="fileList">
+                            <div>2019-02-22 16-50-07.mp4</div>
+                            <div>2019-02-22 16-50-07.mp4</div>
+                            <div>2019-02-22 16-50-07.mp4</div>
+                            <div>2019-02-22 16-50-07.mp4</div>
+                            <div>2019-02-22 16-50-07.mp4</div>
+                            <div>2019-02-22 16-50-07.mp4</div>
+                            <div>2019-02-22 16-50-07.mp4</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnWrap">
+                    <button class="btn-line" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn-black">Upload</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- reset -->
+    <div class="modal fade popup" id="reset" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 420px;">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button class="closeBtn" data-bs-dismiss="modal">X</button>
+                <div>
+                    <h3>New Password</h3>
+                    Please enter you email.<br/>
+                    We wil send you a confirmation link where you can change your password.
+                </div>
+                <div class="btnWrap" style="transform: translateY(-10px);">
+                    <input class="input" type="text" placeholder="Please enter you email">
+                    <button class="btn-line">Reset Password</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- New Password -->
+    <div class="modal fade popup" id="password" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 420px;">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button class="closeBtn" data-bs-dismiss="modal">X</button>
+                <div style="margin-bottom: 30px;">
+                    <h3>New Password</h3>
+                    We have sent you an email to the registered email address. Please click on the link enclosed to confirm the password request.
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Quote Summary -->
     <div class="modal printModal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
